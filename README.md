@@ -221,3 +221,9 @@ DROP TABLE IF EXISTS Parking.Building;
 DROP SCHEMA IF EXISTS Auth;
 DROP SCHEMA IF EXISTS Parking;
 ```
+
+Agregar campo para forzar cambio de contraseña en primer ingreso
+``` SQL
+ALTER TABLE Auth.Users
+ADD must_change_password BIT NOT NULL DEFAULT 1;
+
